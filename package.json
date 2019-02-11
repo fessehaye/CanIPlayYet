@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "next",
-    "build": "next build",
-    "start": "next start",
+    "build": "concurrently --kill-others \"npm run build:next\" \"npm run build:lambda\"",
+    "start": "concurrently --kill-others \"npm run dev\" \"npm run start:lambda\"",
+    "build:next": "next build",
+    "start:next": "next start",
     "start:lambda": "netlify-lambda serve lambda",
     "build:lambda": "netlify-lambda build lambda"
   },
@@ -26,6 +28,7 @@
     "@zeit/next-sass": "^1.0.1",
     "axios": "^0.18.0",
     "babel-loader": "^8.0.5",
+    "concurrently": "^4.1.0",
     "dotenv": "^6.2.0",
     "next": "^7.0.2",
     "node-sass": "^4.11.0",
@@ -34,6 +37,7 @@
     "webpack": "^4.28.4"
   },
   "devDependencies": {
+    "bulma": "^0.7.4",
     "netlify-lambda": "^1.2.0"
   }
 }

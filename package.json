@@ -1,43 +1,42 @@
 {
-  "name": "caniplayyet",
-  "version": "1.0.0",
-  "description": "A site to indicate weather you can can friendlies/casual games during the tournament with remaining setups.",
-  "main": "index.js",
-  "scripts": {
-    "dev": "next",
-    "build": "concurrently --kill-others \"npm run build:next\" \"npm run build:lambda\"",
-    "start": "concurrently --kill-others \"npm run dev\" \"npm run start:lambda\"",
-    "build:next": "next build",
-    "start:next": "next start",
-    "start:lambda": "netlify-lambda serve lambda",
-    "build:lambda": "netlify-lambda build lambda"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fessehaye/CanIPlayYet.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/fessehaye/CanIPlayYet/issues"
-  },
-  "homepage": "https://github.com/fessehaye/CanIPlayYet#readme",
-  "dependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.3",
-    "@zeit/next-sass": "^1.0.1",
-    "axios": "^0.18.0",
-    "babel-loader": "^8.0.5",
-    "concurrently": "^4.1.0",
-    "dotenv": "^6.2.0",
-    "next": "^7.0.2",
-    "node-sass": "^4.11.0",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "webpack": "^4.28.4"
-  },
-  "devDependencies": {
-    "bulma": "^0.7.4",
-    "netlify-lambda": "^1.2.0"
-  }
+	"name": "caniplayyet",
+	"version": "1.0.0",
+	"description": "A site to indicate weather you can can friendlies/casual games during the tournament with remaining setups.",
+	"main": "index.js",
+	"scripts": {
+		"dev": "next",
+		"build": "concurrently --kill-others \"npm run build:next\" \"npm run build:lambda\"",
+		"start": "concurrently --kill-others \"npm run dev\" \"npm run start:lambda\"",
+		"build:next": "next build",
+		"start:next": "next start",
+		"start:lambda": "netlify-lambda serve lambda",
+		"build:lambda": "netlify-lambda build lambda"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/fessehaye/CanIPlayYet.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/fessehaye/CanIPlayYet/issues"
+	},
+	"homepage": "https://github.com/fessehaye/CanIPlayYet#readme",
+	"dependencies": {
+		"@babel/core": "^7.2.2",
+		"@babel/preset-env": "^7.2.3",
+		"@zeit/next-sass": "^1.0.1",
+		"axios": "^0.18.0",
+		"babel-loader": "^8.0.5",
+		"concurrently": "^4.1.0",
+		"dotenv": "^6.2.0",
+		"next": "^7.0.2",
+		"node-sass": "^4.11.0",
+		"react": "^16.7.0",
+		"react-dom": "^16.7.0",
+		"webpack": "^4.28.4"
+	},
+	"devDependencies": {
+		"netlify-lambda": "^1.2.0"
+	}
 }

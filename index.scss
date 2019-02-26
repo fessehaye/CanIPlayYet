@@ -1,18 +1,10 @@
-@charset "utf-8";
-@import "./node_modules/bulma/bulma.sass";
-
-$color__indigo: #6574CD;
-$color__white: #fff;
-$color__black: #353535;
-
-$primary: $color__indigo;
+@import url('https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css');
 
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-    margin:0;
-    font-family: 'Roboto', sans-serif;
-    color:$color__black;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
 }

@@ -5,9 +5,10 @@
 	"main": "index.js",
 	"scripts": {
 		"dev": "next",
-		"build": "npm run build:next && npm run build:lambda",
+		"build": "npm run export && npm run build:lambda",
 		"start": "concurrently --kill-others \"npm run dev\" \"npm run start:lambda\"",
 		"build:next": "next build",
+		"export": "next build && next export",
 		"start:next": "next start",
 		"start:lambda": "netlify-lambda serve lambda",
 		"build:lambda": "netlify-lambda build lambda"

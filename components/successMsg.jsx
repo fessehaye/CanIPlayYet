@@ -10,10 +10,10 @@ export default (props) => {
             </div>
             <div className="bg-green-lightest p-4 rounded-b-sm leading-normal flex">
                 <div className="bg-green-lightest p-4 rounded-b-sm leading-normal flex">
-                    <div className="w-1/5 flex justify-center items-center mr-6">
+                    <div className="flex justify-center items-center mr-6">
                         <i className="fas fa-thumbs-up text-green" style={{fontSize:"6em"}}></i>
                     </div>
-                    <div className="w-4/5">
+                    <div className="">
                         <p>You can go play friendlies.</p>
                         <p>There should be {stations} stations available for use.</p>
                         <p>We are {complete}% complete the bracket.</p>

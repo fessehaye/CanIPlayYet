@@ -1,9 +1,9 @@
 export default (props) => {
 	const inputClass = "shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight border-indigo-light focus:outline-none focus:shadow-outline";
-	const buttonClass = "ml-auto shadow bg-indigo hover:bg-indigo-light focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded";
+	const buttonClass = "shadow bg-indigo hover:bg-indigo-light focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded";
 	
 	return (
-		<div className="m-4 p-4 flex bg-white shadow-md rounded">
+		<div className="m-4 p-4 flex bg-white shadow-md rounded items-center">
 			<div className="flex mx-2 items-center">
 				<label className="text-indigo-darker font-bold mr-2" htmlFor="slug">
 					Slug
@@ -45,13 +45,16 @@ export default (props) => {
 					</span>
 				</label>
 			</div>
+
+			<i className="fas fa-share-alt ml-auto mr-6 text-3xl cursor-pointer text-indigo-light hover:text-indigo" onClick={props.shareLink}></i>
+			<i className="fas fa-question-circle ml-0 mr-6 text-3xl cursor-pointer text-indigo-light hover:text-indigo" onClick={props.doTour}></i>
 			
 			<button 
 			  className={buttonClass}
 			  type="button"
 			  disabled={!props.slug || !props.setups || props.loading}
               onClick={props.checkFriendlies}>
-				Submit
+				Check
 			</button>
 		</div>
 	);

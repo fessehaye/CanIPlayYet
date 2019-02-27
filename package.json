@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"dev": "next",
-		"build": "concurrently --kill-others \"npm run build:next\" \"npm run build:lambda\"",
+		"build": "npm run build:next && npm run build:lambda",
 		"start": "concurrently --kill-others \"npm run dev\" \"npm run start:lambda\"",
 		"build:next": "next build",
 		"start:next": "next start",

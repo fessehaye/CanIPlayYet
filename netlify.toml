@@ -1,4 +1,4 @@
 [build]
-  command = "yarn build:next"
-  functions = "./func"
-  publish = "./.next"
+  command = "yarn build"
+  functions = "func"
+  publish = ".next"

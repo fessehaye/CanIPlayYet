@@ -15,7 +15,7 @@ export default class extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            slug: 'test_subject567',
+            slug: '',
             setups: 0,
             loop: false,
             result: null,

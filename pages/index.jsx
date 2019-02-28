@@ -6,22 +6,51 @@ import NavBar from '../components/navBar';
 import Success from '../components/successMsg';
 import Failure from '../components/failMsg';
 import Intro from '../components/introMsg';
+import Tour from 'reactour';
 
 const SERVER = process.env.NODE_ENV === 'production'
     ? '/.netlify/functions/index'
-    : 'http://localhost:9000'
+    : 'http://localhost:9000';
+
+const steps = [
+    {
+        selector: '#slugTutorial',
+        content: 'Copy the slug from the challonge bracket and paste it here. https://challonge.com/<slug> should be the format.'
+    }, {
+        selector: '#setupTutorial',
+        content: 'Enter the number of setups that you have available.'
+    }, {
+        selector: '#checkTutorial',
+        content: 'Once you click check, a message will appear if there are available setups for free play.'
+    }, {
+        selector: '#loopTutorial',
+        content: 'If you want to continuously check for updates, check this section and the updates will occur every 30 seconds. This is for the TO use only!'
+    }, {
+        selector: '#shareTutorial',
+        content: 'That being said, if you want a link to share with others, this icon will open a shareable link that just needs to be refreshed if they want to see the current updated message. Have fun!'
+    }
+];
 
 export default class extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            slug: 'test_subject567',
+            slug: '',
             setups: 0,
             loop: false,
             result: null,
-            loading: false
+            loading: false,
+            isTourOpen:false
         };
+    }
+
+    doTour = () => {
+        this.setState({isTourOpen: true});
+    }
+
+    closeTour = () => {
+        this.setState({isTourOpen: false});
     }
 
     componentDidMount() {
@@ -52,7 +81,7 @@ export default class extends React.Component {
                     loading: false
                 }, () => {
                     if (loop) {
-                        setTimeout(this.checkFriendlies(), 6000);
+                        setTimeout(this.checkFriendlies(), 30000);
                     }
                 })
             })
@@ -65,10 +94,6 @@ export default class extends React.Component {
 
     shareLink = () => {
         window.open("/view" + window.location.search);
-    }
-
-    doTour = () => {
-        alert("coming soon");
     }
 
     render() {
@@ -92,6 +117,12 @@ export default class extends React.Component {
                         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
                         crossorigin="anonymous"/>
                 </Head>
+
+                <Tour
+                steps={steps}
+                isOpen={this.state.isTourOpen}
+                accentColor={'#5661B3'}
+                onRequestClose={this.closeTour}/>
 
                 <NavBar
                     setups={setups}

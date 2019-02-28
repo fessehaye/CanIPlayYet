@@ -4,7 +4,7 @@ export default (props) => {
 	
 	return (
 		<div className="m-4 p-4 flex bg-white shadow-md rounded items-center">
-			<div className="flex mx-2 items-center">
+			<div className="flex mx-2 items-center" id="slugTutorial">
 				<label className="text-indigo-darker font-bold mr-2" htmlFor="slug">
 					Slug
 				</label>
@@ -18,7 +18,7 @@ export default (props) => {
 				/>
 			</div>
 			
-			<div className="flex mx-2 items-center">
+			<div className="flex mx-2 items-center" id="setupTutorial">
 				<label className="text-indigo-darker font-bold mr-2" htmlFor="setups">
 					Setups
 				</label>
@@ -32,7 +32,7 @@ export default (props) => {
 				/>
 			</div>
 
-			<div className="flex mx-4 items-center">
+			<div className="flex mx-4 items-center" id="loopTutorial">
 				<label className="block text-indigo-darker font-bold">
 					<input
 					 	className="mr-1 leading-tight"
@@ -46,12 +46,13 @@ export default (props) => {
 				</label>
 			</div>
 
-			<i className="fas fa-share-alt ml-auto mr-6 text-3xl cursor-pointer text-indigo-light hover:text-indigo" onClick={props.shareLink}></i>
+			<i id="shareTutorial" className="fas fa-share-alt ml-auto mr-6 text-3xl cursor-pointer text-indigo-light hover:text-indigo" onClick={props.shareLink}></i>
 			<i className="fas fa-question-circle ml-0 mr-6 text-3xl cursor-pointer text-indigo-light hover:text-indigo" onClick={props.doTour}></i>
 			
 			<button 
 			  className={buttonClass}
 			  type="button"
+			  id="checkTutorial"
 			  disabled={!props.slug || !props.setups || props.loading}
               onClick={props.checkFriendlies}>
 				Check

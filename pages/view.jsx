@@ -8,7 +8,7 @@ import Failure from '../components/failMsg';
 import Intro from '../components/introMsg';
 
 const SERVER = process.env.NODE_ENV === 'production'
-    ? '.netlify/functions/index'
+    ? '/.netlify/functions/index'
     : 'http://localhost:9000'
 
 export default class extends React.Component {

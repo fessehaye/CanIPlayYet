@@ -107,7 +107,7 @@ export default class extends React.Component {
         }
 
         return (
-            <div className="flex flex-col w-full h-screen bg-indigo-lightest">
+            <div className="flex flex-col w-full h-screen bg-signal">
                 <Head>
                     <title>Can I Play Yet...</title>
                     <meta name="viewport" content="initial-scale=1.0, width=device-width"/>

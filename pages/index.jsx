@@ -6,6 +6,7 @@ import NavBar from '../components/navBar';
 import Success from '../components/successMsg';
 import Failure from '../components/failMsg';
 import Intro from '../components/introMsg';
+import Footer from '../components/footer';
 import Tour from 'reactour';
 
 const SERVER = process.env.NODE_ENV === 'production'
@@ -137,6 +138,7 @@ export default class extends React.Component {
                     className="mx-5 lg:mx-auto flex justify-center items-center flex-1 flex-col">
                     {notif}
                 </div>
+                <Footer />
             </div>
         )
     }

@@ -14,7 +14,7 @@ export default (props) => {
 				  type="text"
 				  placeholder="slug"
 				  value={props.slug}
-				  onChange={e => props.updateState({ slug: e.target.value })}
+				  onChange={e => props.updateState({ slug: e.target.value,result:null })}
 				/>
 			</div>
 			
@@ -28,7 +28,7 @@ export default (props) => {
 				  type="text"
 				  placeholder="setups"
 				  value={props.setups}
-              	  onChange={e => props.updateState({ setups: e.target.value })}
+              	  onChange={e => props.updateState({ setups: e.target.value,result:null })}
 				/>
 			</div>
 
@@ -38,7 +38,7 @@ export default (props) => {
 					 	className="mr-1 leading-tight"
 						type="checkbox"
 						value={props.loop}
-						onChange={e => props.updateState({ loop: e.target.value })}
+						onChange={e => props.updateState({ loop: e.target.value,result:null })}
 					/>
 					<span className="text-indigo-darker font-bold">
 					Loop

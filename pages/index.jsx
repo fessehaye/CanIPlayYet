@@ -94,7 +94,12 @@ export default class extends React.Component {
     }
 
     shareLink = () => {
-        window.open("/view" + window.location.search);
+        if(this.state.result){
+            window.open("/view" + window.location.search)
+        }
+        else {
+            alert("Need to click check button with setups and slug filled in!");
+        }
     }
 
     render() {

@@ -19,7 +19,6 @@ exports.handler = async function (event, context) {
                     body: response.error
                 };
             } else {
-                console.log(response.data);
                 const matches = response.data;
                 const total = matches.length;
                 if (total === 0) {

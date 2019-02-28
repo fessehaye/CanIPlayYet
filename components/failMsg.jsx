@@ -4,13 +4,13 @@ export default (props) => {
 
     return (
         <article className="shadow-md min-w-full text-lg">
-          <div className="bg-red-dark text-white font-bold px-4 py-4 rounded-t-sm">
+          <div className="bg-red-dark text-white font-bold px-4 py-4 rounded-t">
             <p>No! Do Not Play!</p>
           </div>
 
-          <div className="bg-red-lightest p-4 rounded-b-sm leading-normal flex">
+          <div className="bg-red-lightest p-4 rounded-b leading-normal flex">
             
-            <div className="w-1/5 flex justify-center items-center mr-6">
+            <div className="flex justify-center items-center mr-6">
                 <i className="fas fa-exclamation-circle text-red" style={{fontSize:"6em"}}></i>
             </div>
 

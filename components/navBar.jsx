@@ -3,8 +3,8 @@ export default (props) => {
 	const buttonClass = "shadow bg-indigo hover:bg-indigo-light focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded";
 	
 	return (
-		<div className="m-4 p-4 flex bg-white shadow-md rounded items-center">
-			<div className="flex mx-2 items-center" id="slugTutorial">
+		<div className="m-4 p-4 flex bg-white shadow-md rounded items-center flex-wrap">
+			<div className="flex mx-2 mb-2 items-center" id="slugTutorial">
 				<label className="text-indigo-darker font-bold mr-2" htmlFor="slug">
 					Slug
 				</label>
@@ -18,7 +18,7 @@ export default (props) => {
 				/>
 			</div>
 			
-			<div className="flex mx-2 items-center" id="setupTutorial">
+			<div className="flex mx-2 mb-2 items-center" id="setupTutorial">
 				<label className="text-indigo-darker font-bold mr-2" htmlFor="setups">
 					Setups
 				</label>

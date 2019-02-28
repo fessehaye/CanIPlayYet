@@ -8,10 +8,10 @@ export default (props) => {
             <div className="bg-green-dark text-white font-bold px-4 py-4 rounded-t">
                 <p>Yes! Have Fun!</p>
             </div>
-            <div className="bg-green-lightest p-4 rounded-b leading-normal flex">
+            <div className="bg-green-lightest p-4 rounded-b leading-normal flex flex-wrap items-center">
                 
-                    <div className="flex justify-center items-center mr-6">
-                        <i className="fas fa-thumbs-up text-green" style={{fontSize:"6em"}}></i>
+                    <div className="flex justify-center items-center mr-6 my-2 flex-grow">
+                        <i className="fas fa-thumbs-up text-green mx-auto" style={{fontSize:"6em"}}></i>
                     </div>
                     <div className="">
                         <p>You can go play on stations that DO NOT have matches playing.</p>

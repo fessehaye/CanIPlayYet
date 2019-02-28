@@ -8,13 +8,13 @@ export default (props) => {
             <p>No! Do Not Play!</p>
           </div>
 
-          <div className="bg-red-lightest p-4 rounded-b leading-normal flex">
+          <div className="bg-red-lightest p-4 rounded-b leading-normal flex flex-wrap items-center">
             
-            <div className="flex justify-center items-center mr-6">
-                <i className="fas fa-exclamation-circle text-red" style={{fontSize:"6em"}}></i>
+            <div className="flex justify-center items-center mr-6 my-2 flex-grow">
+                <i className="fas fa-exclamation-circle text-red mx-auto" style={{fontSize:"6em"}}></i>
             </div>
 
-            <div className="w-4/5">
+            <div className="">
                 <p>All setups are reserved for the event. If you see available setups, please inform a TO.</p>
                 <p>Please be patient as more setups will be available after the first few rounds.</p>
                 <p>We are {complete}% complete the bracket.</p>

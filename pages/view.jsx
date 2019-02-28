@@ -82,7 +82,7 @@ export default class extends React.Component {
                 </Head>
 
                 <div
-                    className="container mx-auto flex justify-center items-center flex-1 flex-col">
+                    className="mx-5 lg:mx-auto flex justify-center items-center flex-1 flex-col">
                     {notif}
                 </div>
             </div>

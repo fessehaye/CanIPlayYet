@@ -1,4 +1,5 @@
 import React from 'react';
+import anime from 'animejs';
 
 export default class extends React.Component {
     constructor(props) {
@@ -13,6 +14,26 @@ export default class extends React.Component {
           { transform: 'rotateY(0deg)', opacity: '1',transformStyle: 'preserve-3d' }
         ], {duration: 500, easing: 'ease-in-out', fill: 'forwards'}
       );
+
+      var tl = anime.timeline({
+        easing: 'easeOutExpo',
+        duration: 750,
+        delay:500
+      });
+
+      tl
+      .add({
+        targets: '.step-1',
+        opacity:1,
+      })
+      .add({
+        targets: '.step-2',
+        opacity:1,
+      })
+      .add({
+        targets: '.step-3',
+        opacity:1,
+      });
     }
 
     componentWillUnmount(){
@@ -42,10 +63,10 @@ export default class extends React.Component {
               </div>
 
               <div className="">
-                  <p>All setups are reserved for the event. If you see available setups, please inform a TO.</p>
-                  <p>Please be patient as more setups will be available after the first few rounds.</p>
-                  <p>We are {complete}% complete the bracket.</p>
-                  <p>Enjoy the tourney!</p>
+                  <p className="opacity-0 step-1">All setups are reserved for the event. If you see available setups, please inform a TO.</p>
+                  <p className="opacity-0 step-1">Please be patient as more setups will be available after the first few rounds.</p>
+                  <p className="opacity-0 step-2">We are {complete}% complete the bracket.</p>
+                  <p className="opacity-0 step-3">Enjoy the tourney!</p>
               </div>
             </div>
         </article>

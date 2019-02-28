@@ -1,4 +1,5 @@
 import React from 'react';
+import anime from 'animejs';
 
 export default class extends React.Component {
     constructor(props) {
@@ -13,6 +14,30 @@ export default class extends React.Component {
           { transform: 'rotateY(0deg)', opacity: '1',transformStyle: 'preserve-3d' }
         ], {duration: 500, easing: 'ease-in-out', fill: 'forwards'}
       );
+
+      var tl = anime.timeline({
+        easing: 'easeOutExpo',
+        duration: 750,
+        delay:500
+      });
+
+      tl
+      .add({
+        targets: '.step-1',
+        opacity:1,
+      })
+      .add({
+        targets: '.step-2',
+        opacity:1,
+      })
+      .add({
+        targets: '.step-3',
+        opacity:1,
+      })
+      .add({
+        targets: '.step-4',
+        opacity:1,
+      });
     }
 
     componentWillUnmount(){
@@ -41,10 +66,10 @@ export default class extends React.Component {
                     <i className="fas fa-thumbs-up text-green mx-auto" style={{fontSize:"6em"}}></i>
                 </div>
                 <div className="">
-                    <p>You can go play on stations that DO NOT have matches playing.</p>
-                    <p>There should be {stations} stations available for use.</p>
-                    <p>We are {complete}% complete the bracket.</p>
-                    <p>Enjoy the tourney!</p>
+                    <p className="opacity-0 step-1">You can go play on stations that DO NOT have matches playing.</p>
+                    <p className="opacity-0 step-2">There should be {stations} stations available for use.</p>
+                    <p className="opacity-0 step-3">We are {complete}% complete the bracket.</p>
+                    <p className="opacity-0 step-4">Enjoy the tourney!</p>
                 </div>
                 
             </div>

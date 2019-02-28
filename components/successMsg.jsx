@@ -66,10 +66,10 @@ export default class extends React.Component {
                     <i className="fas fa-thumbs-up text-green mx-auto" style={{fontSize:"6em"}}></i>
                 </div>
                 <div className="">
-                    <p className="opacity-0 step-1">You can go play on stations that DO NOT have matches playing.</p>
-                    <p className="opacity-0 step-2">There should be {stations} stations available for use.</p>
-                    <p className="opacity-0 step-3">We are {complete}% complete the bracket.</p>
-                    <p className="opacity-0 step-4">Enjoy the tourney!</p>
+                    <p className="opacity-0 step-1 font-sans text-grey-darkest">You can go play on stations that DO NOT have matches playing.</p>
+                    <p className="opacity-0 step-2 font-sans text-grey-darkest">There should be {stations} stations available for use.</p>
+                    <p className="opacity-0 step-3 font-sans text-grey-darkest">We are {complete}% complete the bracket.</p>
+                    <p className="opacity-0 step-4 font-sans text-grey-darkest">Enjoy the tourney!</p>
                 </div>
                 
             </div>

@@ -63,10 +63,10 @@ export default class extends React.Component {
               </div>
 
               <div className="">
-                  <p className="opacity-0 step-1">All setups are reserved for the event. If you see available setups, please inform a TO.</p>
-                  <p className="opacity-0 step-1">Please be patient as more setups will be available after the first few rounds.</p>
-                  <p className="opacity-0 step-2">We are {complete}% complete the bracket.</p>
-                  <p className="opacity-0 step-3">Enjoy the tourney!</p>
+                  <p className="opacity-0 step-1 font-sans text-grey-darkest">All setups are reserved for the event. If you see available setups, please inform a TO.</p>
+                  <p className="opacity-0 step-1 font-sans text-grey-darkest">Please be patient as more setups will be available after the first few rounds.</p>
+                  <p className="opacity-0 step-2 font-sans text-grey-darkest">We are {complete}% complete the bracket.</p>
+                  <p className="opacity-0 step-3 font-sans text-grey-darkest">Enjoy the tourney!</p>
               </div>
             </div>
         </article>

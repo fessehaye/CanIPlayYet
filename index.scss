@@ -22,3 +22,18 @@ body {
 	background: #5661b399;
 	min-height: 25%;
 }
+
+.introMsg {
+	min-height: 60vmin;
+	width: 52vw;
+}
+
+@media (max-width: 500px) {
+	.bg-opacity-indigo {
+		height: 100%;
+	}
+
+	.introMsg {
+		height: auto;
+	}
+}

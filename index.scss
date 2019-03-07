@@ -24,8 +24,10 @@ body {
 }
 
 .introMsg {
-	min-height: 60vmin;
+	min-height: 40vh;
+	max-height: 45rem;
 	width: 52vw;
+	background: #e6e8ff;
 }
 
 @media (max-width: 576px) {

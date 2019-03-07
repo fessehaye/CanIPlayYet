@@ -29,7 +29,7 @@ export default class extends React.Component {
 
       return (
           <article ref={this.myRef} className="shadow-md min-w-full text-lg rounded-lg border-white border-4 relative introMsg">
-            <img className="w-full h-full rounded-lg object-cover hidden sm:block" src={'/static/intro.jpg'}/>
+            <img className="w-full h-full rounded-lg object-cover hidden sm:block" src={'/static/intro.svg'}/>
             <div className="w-full bg-opacity-indigo sm:absolute pin-b text-center flex align-center justify-center">
               <p className="flex items-center justify-center p-6 text-white font-bold text-center align-middle">
                 Welcome to Can I Play Yet, a display tool for Challonge Single Stage Tournaments to represent what stations are avaialble for free play!

@@ -5,7 +5,7 @@ export default (props) => {
 	return (
 		<div className="m-4 p-4 flex bg-white shadow-md rounded items-center flex-wrap">
 			<div className="flex mx-2 mb-2 lg:mb-0 items-center flex-grow flex-no-shrink xl:flex-none" id="slugTutorial">
-				<label className="text-indigo-darker font-bold mr-2" htmlFor="slug">
+				<label className="text-indigo-darker font-bold mr-2 w-16" htmlFor="slug">
 					Slug
 				</label>
 				<input 
@@ -19,7 +19,7 @@ export default (props) => {
 			</div>
 			
 			<div className="flex mx-2 mb-2 lg:mb-0 items-center flex-grow flex-no-shrink xl:flex-none" id="setupTutorial">
-				<label className="text-indigo-darker font-bold mr-2" htmlFor="setups">
+				<label className="text-indigo-darker font-bold mr-2 w-16" htmlFor="setups">
 					Setups
 				</label>
 				<input 

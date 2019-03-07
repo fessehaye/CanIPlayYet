@@ -28,8 +28,12 @@ const steps = [
         content: 'If you want to continuously check for updates, check this section and the updates will occur every 30 seconds. This is for the TO use only!'
     }, {
         selector: '#shareTutorial',
-        content: 'That being said, if you want a link to share with others, this icon will open a shareable link that just needs to be refreshed if they want to see the current updated message. Have fun!'
-    }
+        content: 'That being said, if you want a link to share with others, this icon will open a shareable link that just needs to be refreshed if they want to see the current updated message.'
+    },
+    {
+        selector: '#slugTutorial',
+        content: 'If you need an incomplete bracket to test it out, trying using https://challonge.com/caniplayexample with the slug caniplayexample. Try setting the setups to be greater and less than six to see the different messages.Have fun!'
+    },
 ];
 
 export default class extends React.Component {
@@ -47,7 +51,7 @@ export default class extends React.Component {
     }
 
     doTour = () => {
-        this.setState({isTourOpen: true});
+        this.setState({isTourOpen: true,slug: "caniplayexample",setups: 6});
     }
 
     closeTour = () => {
@@ -67,6 +71,7 @@ export default class extends React.Component {
         searchParams.set("setups", this.state.setups);
 
         history.pushState(null, null, '?' + searchParams.toString());
+
         if (!this.state.loading) {
             this.setState({
                 loading: true

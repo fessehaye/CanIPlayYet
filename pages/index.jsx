@@ -122,6 +122,10 @@ export default class extends React.Component {
                 <Head>
                     <title>Can I Play Yet...</title>
                     <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+                    <meta charset="UTF-8"/>
+                    <meta name="description" content="Bracket Display Tool" />
+                    <meta name="keywords" content="Challonge,Friendlies,Setups,Tournaments" />
+                    <meta name="author" content="Simon Fessehaye" />
                     <link
                         rel="stylesheet"
                         href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"

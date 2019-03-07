@@ -34,7 +34,7 @@
 		"dotenv": "^6.2.0",
 		"next": "^7.0.2",
 		"node-sass": "^4.11.0",
-		"react": "^16.7.0",
+		"react": "^16.8.4",
 		"react-dom": "^16.7.0",
 		"reactour": "^1.13.1",
 		"styled-components": "4.0.0",

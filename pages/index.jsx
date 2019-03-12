@@ -16,7 +16,7 @@ const SERVER = process.env.NODE_ENV === 'production'
 const steps = [
     {
         selector: '#slugTutorial',
-        content: 'Copy the slug from the challonge bracket and paste it here. https://challonge.com/<slug> should be the format.'
+        content: 'Copy the slug from the Challonge bracket and paste it here. https://challonge.com/<slug> should be the format.'
     }, {
         selector: '#setupTutorial',
         content: 'Enter the number of setups that you have available.'
@@ -32,7 +32,7 @@ const steps = [
     },
     {
         selector: '#slugTutorial',
-        content: 'If you need an incomplete bracket to test it out, trying using https://challonge.com/caniplayexample with the slug caniplayexample. Try setting the setups to be greater and less than six to see the different messages.Have fun!'
+        content: 'If you need an incomplete bracket to test out, trying using https://challonge.com/caniplayexample with the slug caniplayexample. Try setting the setups to be greater and less than six to see the different messages. Have fun!'
     },
 ];
 

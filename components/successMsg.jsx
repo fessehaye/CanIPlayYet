@@ -66,7 +66,7 @@ export default class extends React.Component {
             <div className="bg-green-lightest p-4 rounded-b leading-normal flex flex-wrap items-center">
                 
                 <div className="flex justify-center items-center mr-6 my-2 flex-grow">
-                    <i className="fas fa-thumbs-up text-green mx-auto" style={{fontSize:"6em"}}></i>
+                    <i className="fas fa-thumbs-up text-green mx-auto" style={{fontSize:"13vh"}}></i>
                 </div>
                 <div className="">
                     <p className="opacity-0 step-1 font-sans text-grey-darkest">You can go play on stations that DO NOT have matches playing.</p>

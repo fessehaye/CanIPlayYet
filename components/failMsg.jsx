@@ -63,7 +63,7 @@ export default class extends React.Component {
             <div className="bg-red-lightest p-4 rounded-b leading-normal flex flex-wrap items-center">
               
               <div className="flex justify-center items-center mr-6 my-2 flex-grow">
-                  <i className="fas fa-exclamation-circle text-red mx-auto" style={{fontSize:"6em"}}></i>
+                  <i className="fas fa-exclamation-circle text-red mx-auto" style={{fontSize:"13vh"}}></i>
               </div>
 
               <div className="">

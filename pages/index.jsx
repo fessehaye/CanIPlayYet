@@ -118,7 +118,7 @@ export default class extends React.Component {
         }
 
         return (
-            <div className="flex flex-col w-full min-h-screen bg-signal">
+            <main className="flex flex-col w-full min-h-screen bg-signal">
                 <Head>
                     <title>Can I Play Yet...</title>
                     <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
@@ -148,12 +148,12 @@ export default class extends React.Component {
                     doTour={this.doTour}
                     updateState={state => this.setState(state)}
                     checkFriendlies={this.checkFriendlies}/>
-                <div
+                <div>
                     className="mx-5 lg:mx-auto flex justify-center items-center flex-1 flex-col">
                     {notif}
                 </div>
                 <Footer />
-            </div>
+            </main>
         )
     }
 }

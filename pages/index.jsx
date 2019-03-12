@@ -3,11 +3,27 @@ import Head from 'next/head';
 import '../index.scss';
 import axios from 'axios';
 import NavBar from '../components/navBar';
-import Success from '../components/successMsg';
-import Failure from '../components/failMsg';
-import Intro from '../components/introMsg';
 import Footer from '../components/footer';
 import Tour from 'reactour';
+import dynamic from 'next/dynamic';
+
+const Intro = dynamic({
+  loader: () => import('../components/introMsg'),
+  loading: () => <p>Loading ...</p>,
+  ssr: false
+});
+
+const Failure = dynamic({
+  loader: () => import('../components/failMsg'),
+  loading: () => <p>Loading ...</p>,
+  ssr: false
+});
+
+const Success = dynamic({
+  loader: () => import('../components/successMsg'),
+  loading: () => <p>Loading ...</p>,
+  ssr: false
+});
 
 const SERVER = process.env.NODE_ENV === 'production'
     ? '/.netlify/functions/index'
@@ -122,7 +138,7 @@ export default class extends React.Component {
                 <Head>
                     <title>Can I Play Yet...</title>
                     <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
-                    <meta charset="UTF-8"/>
+                    <meta charSet="UTF-8"/>
                     <meta name="description" content="Bracket Display Tool" />
                     <meta name="keywords" content="Challonge,Friendlies,Setups,Tournaments" />
                     <meta name="author" content="Simon Fessehaye" />
@@ -131,7 +147,6 @@ export default class extends React.Component {
                         href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
                         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
                         crossOrigin="anonymous"/>
-                    <script src="https://cdn.jsdelivr.net/web-animations/latest/web-animations.min.js"></script>
                 </Head>
 
                 <Tour

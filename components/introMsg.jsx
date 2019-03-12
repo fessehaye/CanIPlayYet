@@ -1,5 +1,5 @@
 import React from 'react';
-
+import 'web-animations-js';
 
 export default class extends React.Component {
     constructor(props) {

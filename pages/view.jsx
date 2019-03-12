@@ -4,24 +4,9 @@ import '../index.scss';
 import axios from 'axios';
 import NavBar from '../components/navBar';
 import Footer from '../components/footer';
-
-const Intro = dynamic({
-  loader: () => import('../components/introMsg'),
-  loading: () => <p>Loading ...</p>,
-  ssr: false
-});
-
-const Failure = dynamic({
-  loader: () => import('../components/failMsg'),
-  loading: () => <p>Loading ...</p>,
-  ssr: false
-});
-
-const Success = dynamic({
-  loader: () => import('../components/successMsg'),
-  loading: () => <p>Loading ...</p>,
-  ssr: false
-});
+import Success from '../components/successMsg';
+import Failure from '../components/failMsg';
+import Intro from '../components/introMsg';
 
 const SERVER = process.env.NODE_ENV === 'production'
     ? '/.netlify/functions/index'

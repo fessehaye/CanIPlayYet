@@ -32,7 +32,7 @@ The following tools were used for this project
 - Netlify Lambda for lambda functions
 - Tailwind.css for styling
 - FontAwesome for icons
-- Unsplash for stock images
+- Undraw for stock images
 - HeroPatterns for background image patterns
-- Anime.js and Animation API for animations/transitions
+- Anime.js for animations/transitions
 - Netlify for hosting and deployments

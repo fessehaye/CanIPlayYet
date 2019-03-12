@@ -1,5 +1,5 @@
 import React from 'react';
-import 'web-animations-js';
+import anime from 'animejs';
 
 export default class extends React.Component {
     constructor(props) {
@@ -8,22 +8,27 @@ export default class extends React.Component {
     }
 
     componentDidMount(){
-      this.myRef.current.animate(
-        [
-          { transform: 'rotateY(-60deg)', opacity: '0',transformStyle: 'preserve-3d' },
-          { transform: 'rotateY(0deg)', opacity: '1',transformStyle: 'preserve-3d' }
-        ], {duration: 500, easing: 'ease-in-out', fill: 'forwards'}
-      );
+
+      anime({
+        targets: this.myRef.current,
+        rotateY: [-60, 0], 
+        opacity: [0,1],
+        transformStyle: 'preserve-3d',
+        duration: 500,
+        easing: 'easeInOutQuad'
+      });
+
     }
 
     componentWillUnmount(){
-      this.myRef.current.animate(
-        [
-          { transform: 'rotateY(0deg)', opacity: '1',transformStyle: 'preserve-3d' },
-          { transform: 'rotateY(-60deg)', opacity: '0',transformStyle: 'preserve-3d' }
-          
-        ], {duration: 500, easing: 'ease-in-out', fill: 'forwards'}
-      );
+      anime({
+        targets: this.myRef.current,
+        rotateY: [0, -60], 
+        opacity: [1,0],
+        transformStyle: 'preserve-3d',
+        duration: 500,
+        easing: 'easeInOutQuad'
+      });
     }
 
     render() {

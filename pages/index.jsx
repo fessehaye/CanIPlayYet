@@ -148,7 +148,7 @@ export default class extends React.Component {
                     doTour={this.doTour}
                     updateState={state => this.setState(state)}
                     checkFriendlies={this.checkFriendlies}/>
-                <div>
+                <div
                     className="mx-5 lg:mx-auto flex justify-center items-center flex-1 flex-col">
                     {notif}
                 </div>

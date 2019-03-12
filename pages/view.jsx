@@ -86,7 +86,7 @@ export default class extends React.Component {
                         crossorigin="anonymous"/>
                 </Head>
 
-                <div>
+                <div
                     className="mx-5 lg:mx-auto flex justify-center items-center flex-1 flex-col">
                     {notif}
                 </div>

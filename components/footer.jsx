@@ -1,7 +1,9 @@
+import {footer as styles} from '../utils/styles';
+
 export default () => {
     return (
-        <footer className="w-screen md:mt-16 py-4 text-center font-bold text-indigo-dark">
-            <p>Made with 💖 by <a className="no-underline inherit-color" href="https://github.com/fessehaye/CanIPlayYet">Simon Fessehaye</a></p>
+        <footer className={styles.container}>
+            <p>Made with 💖 by <a className={styles.link} href="https://github.com/fessehaye/CanIPlayYet">Simon Fessehaye</a></p>
         </footer>
     )
 }

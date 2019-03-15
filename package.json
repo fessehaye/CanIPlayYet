@@ -1,47 +1,59 @@
 {
-	"name": "caniplayyet",
-	"version": "1.0.0",
-	"description": "A site to indicate weather you can can friendlies/casual games during the tournament with remaining setups.",
-	"main": "index.js",
-	"scripts": {
-		"dev": "next",
-		"build": "npm run export && npm run build:lambda",
-		"start": "concurrently --kill-others \"npm run dev\" \"npm run start:lambda\"",
-		"build:next": "next build",
-		"export": "next build && next export",
-		"start:next": "next start",
-		"start:lambda": "netlify-lambda serve lambda",
-		"build:lambda": "netlify-lambda build lambda"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/fessehaye/CanIPlayYet.git"
-	},
-	"author": "",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/fessehaye/CanIPlayYet/issues"
-	},
-	"homepage": "https://github.com/fessehaye/CanIPlayYet#readme",
-	"dependencies": {
-		"@babel/core": "^7.2.2",
-		"@babel/preset-env": "^7.2.3",
-		"@zeit/next-sass": "^1.0.1",
-		"animejs": "^3.0.1",
-		"axios": "^0.18.0",
-		"babel-loader": "^8.0.5",
-		"concurrently": "^4.1.0",
-		"dotenv": "^6.2.0",
-		"next": "^8.0.3",
-		"node-sass": "^4.11.0",
-		"react": "^16.8.4",
-		"react-dom": "^16.8.4",
-		"reactour": "^1.13.1",
-		"styled-components": "4.0.0",
-		"web-animations-js": "^2.3.1",
-		"webpack": "^4.28.4"
-	},
-	"devDependencies": {
-		"netlify-lambda": "^1.2.0"
-	}
+  "name": "caniplayyet",
+  "version": "1.0.0",
+  "description": "A site to indicate weather you can can friendlies/casual games during the tournament with remaining setups.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "npm run export && npm run build:lambda",
+    "start": "concurrently --kill-others \"npm run dev\" \"npm run start:lambda\"",
+    "build:next": "next build",
+    "export": "next build && next export",
+    "start:next": "next start",
+    "start:lambda": "netlify-lambda serve lambda",
+    "build:lambda": "netlify-lambda build lambda",
+    "lint": "eslint *.js",
+    "lint:fix": "eslint *.js --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fessehaye/CanIPlayYet.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fessehaye/CanIPlayYet/issues"
+  },
+  "homepage": "https://github.com/fessehaye/CanIPlayYet#readme",
+  "dependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@zeit/next-sass": "^1.0.1",
+    "animejs": "^3.0.1",
+    "axios": "^0.18.0",
+    "babel-loader": "^8.0.5",
+    "concurrently": "^4.1.0",
+    "dotenv": "^6.2.0",
+    "next": "^8.0.3",
+    "node-sass": "^4.11.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "reactour": "^1.13.1",
+    "styled-components": "4.0.0",
+    "web-animations-js": "^2.3.1",
+    "webpack": "^4.28.4"
+  },
+  "devDependencies": {
+    "babel-eslint": "9.0.0",
+    "eslint": "5.14.1",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-config-prettier": "4.1.0",
+    "eslint-config-wesbos": "0.0.19",
+    "eslint-plugin-html": "5.0.3",
+    "eslint-plugin-import": "2.16.0",
+    "eslint-plugin-prettier": "3.0.1",
+    "eslint-plugin-react": "7.12.4",
+    "netlify-lambda": "^1.2.0",
+    "prettier": "1.16.4"
+  }
 }

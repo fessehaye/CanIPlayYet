@@ -1,15 +1,14 @@
+import {navBar as styles} from '../utils/styles';
 export default (props) => {
-	const inputClass = "shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight border-indigo-light focus:outline-none focus:shadow-outline";
-	const buttonClass = "shadow bg-indigo hover:bg-indigo-light focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded";
 	
 	return (
-		<div className="m-4 p-4 flex bg-white shadow-md rounded items-center flex-wrap">
-			<div className="flex mx-2 mb-2 lg:mb-0 items-center flex-grow  xl:flex-none" id="slugTutorial">
-				<label className="text-indigo-darker font-bold mr-2 w-16" htmlFor="slug">
+		<div className={styles.nav}>
+			<div className={styles.inputGroup} id="slugTutorial">
+				<label className={styles.inputLabel} htmlFor="slug">
 					Slug
 				</label>
 				<input 
-				  className={inputClass}
+				  className={styles.input}
 				  id="slug"
 				  type="text"
 				  placeholder="slug"
@@ -18,12 +17,12 @@ export default (props) => {
 				/>
 			</div>
 			
-			<div className="flex mx-2 mb-2 lg:mb-0 items-center flex-grow xl:flex-none" id="setupTutorial">
-				<label className="text-indigo-darker font-bold mr-2 w-16" htmlFor="setups">
+			<div className={styles.inputGroup} id="setupTutorial">
+				<label className={styles.inputLabel} htmlFor="setups">
 					Setups
 				</label>
 				<input 
-				  className={inputClass}
+				  className={styles.input}
 				  id="setups"
 				  type="text"
 				  placeholder="setups"
@@ -32,25 +31,25 @@ export default (props) => {
 				/>
 			</div>
 
-			<div className="flex mx-4 items-center" id="loopTutorial">
-				<label className="block text-indigo-darker font-bold">
+			<div className={styles.checkboxGroup} id="loopTutorial">
+				<label className={styles.checkboxLabel}>
 					<input
-					 	className="mr-1 leading-tight"
+					 	className={styles.checkbox}
 						type="checkbox"
 						value={props.loop}
 						onChange={e => props.updateState({ loop: e.target.value,result:null })}
 					/>
-					<span className="text-indigo-darker font-bold">
+					<span className={styles.checkboxText}>
 					Loop
 					</span>
 				</label>
 			</div>
 
-			<i id="shareTutorial" className="fas fa-share-alt ml-auto mr-6 text-3xl cursor-pointer text-indigo-light hover:text-indigo" onClick={props.shareLink}></i>
-			<i className="fas fa-question-circle ml-0 mr-6 text-3xl cursor-pointer text-indigo-light hover:text-indigo" onClick={props.doTour}></i>
+			<i id="shareTutorial" className={styles.shareTutorial} onClick={props.shareLink}></i>
+			<i className={styles.tour} onClick={props.doTour}></i>
 			
 			<button 
-			  className={buttonClass}
+			  className={styles.button}
 			  type="button"
 			  id="checkTutorial"
 			  disabled={!props.slug || !props.setups || props.loading}

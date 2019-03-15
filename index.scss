@@ -24,10 +24,19 @@ body {
 }
 
 .introMsg {
-	min-height: 40vh;
-	max-height: 45rem;
+	height: 32rem;
 	width: 52vw;
 	background: #e6e8ff;
+}
+
+.introMsg > img {
+	height: 100%;
+}
+
+.introMsg .bg {
+	background-image: url('/static/intro.svg');
+	background-size: cover;
+	background-position: center center;
 }
 
 @media (max-width: 576px) {
@@ -37,5 +46,6 @@ body {
 
 	.introMsg {
 		height: auto;
+		min-height: auto;
 	}
 }

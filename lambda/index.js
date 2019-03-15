@@ -23,7 +23,7 @@ exports.handler = async function(event, context) {
       const matches = response.data;
       const total = matches.length;
       if (total === 0) {
-        throw 'No Event Data Avaialble';
+        throw { error: 'No Event Data Avaialble' };
       }
       const pending = matches.filter(m => m.match.state === 'pending').length;
       const complete = matches.filter(m => m.match.state === 'complete').length;

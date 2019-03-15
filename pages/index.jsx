@@ -5,12 +5,8 @@ import Tour from 'reactour';
 import Success from '../components/successMsg';
 import Failure from '../components/failMsg';
 import Intro from '../components/introMsg';
-import { Steps } from '../utils/steps';
+import { Steps,SERVER } from '../utils/index';
 import Page from '../layouts/main';
-
-const SERVER = process.env.NODE_ENV === 'production'
-    ? '/.netlify/functions/index'
-    : 'http://localhost:9000';
 
 
 export default class extends React.Component {

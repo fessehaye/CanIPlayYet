@@ -1,14 +1,10 @@
 import React from 'react';
 import axios from 'axios';
-import NavBar from '../components/navBar';
 import Success from '../components/successMsg';
 import Failure from '../components/failMsg';
 import Intro from '../components/introMsg';
 import Page from '../layouts/main';
-
-const SERVER = process.env.NODE_ENV === 'production'
-    ? '/.netlify/functions/index'
-    : 'http://localhost:9000'
+import { SERVER } from '../utils/index';
 
 export default class extends React.Component {
     constructor(props) {

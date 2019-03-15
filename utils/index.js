@@ -30,3 +30,5 @@ export const Steps = [
 			'eater and less than six to see the different messages. Have fun!',
 	},
 ];
+
+export const SERVER = process.env.NODE_ENV === 'production' ? '/.netlify/functions/index' : 'http://localhost:9000';

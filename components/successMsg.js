@@ -13,7 +13,7 @@ const successMsg = props => {
 
   return (
     <article ref={myRef} className={styles.dialog}>
-      <div className={styles.dialog}>
+      <div className={styles.header}>
         <p>Yes! Have Fun!</p>
       </div>
       <div className={styles.body}>

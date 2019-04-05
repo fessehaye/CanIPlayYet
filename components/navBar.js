@@ -13,7 +13,7 @@ const navBar = props => (
         placeholder="slug"
         value={props.slug}
         onChange={e =>
-          props.updateState({ slug: e.target.value, result: null })
+          //props.updateState({ slug: e.target.value, result: null })
         }
       />
     </div>
@@ -29,7 +29,7 @@ const navBar = props => (
         placeholder="setups"
         value={props.setups}
         onChange={e =>
-          props.updateState({ setups: e.target.value, result: null })
+          //props.updateState({ setups: e.target.value, result: null })
         }
       />
     </div>
@@ -41,7 +41,7 @@ const navBar = props => (
           type="checkbox"
           value={props.loop}
           onChange={e =>
-            props.updateState({ loop: e.target.value, result: null })
+            //props.updateState({ loop: e.target.value, result: null })
           }
         />
         <span className={styles.checkboxText}>Loop</span>

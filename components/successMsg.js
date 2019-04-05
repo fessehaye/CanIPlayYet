@@ -1,9 +1,9 @@
-import React, { useRef } from 'react';
-import anime from 'animejs';
-import { useMsgAnimations } from '../utils/hooks';
-import { successMsg as styles } from '../utils/styles';
+import React, { useRef } from "react";
+import anime from "animejs";
+import { useMsgAnimations } from "../utils/hooks";
+import { successMsg as styles } from "../utils/styles";
 
-const successMsg = props => {
+export default function successMsg(props) {
   const myRef = useRef();
   useMsgAnimations(myRef, true);
 
@@ -18,7 +18,7 @@ const successMsg = props => {
       </div>
       <div className={styles.body}>
         <div className={styles.iconContainer}>
-          <i className={styles.icon} style={{ fontSize: '13vh' }} />
+          <i className={styles.icon} style={{ fontSize: "13vh" }} />
         </div>
         <div>
           <p className={`${styles.bullets} step-1`}>
@@ -35,6 +35,4 @@ const successMsg = props => {
       </div>
     </article>
   );
-};
-
-export default successMsg;
+}

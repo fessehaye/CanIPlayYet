@@ -1,9 +1,8 @@
-import React, { useRef } from 'react';
-import anime from 'animejs';
-import { useMsgAnimations } from '../utils/hooks';
-import { failMsg as styles } from '../utils/styles';
+import React, { useRef } from "react";
+import { useMsgAnimations } from "../utils/hooks";
+import { failMsg as styles } from "../utils/styles";
 
-const failMsg = props => {
+export default function failMsg(props) {
   const myRef = useRef();
   const { result } = props;
   const complete = ((result.complete / result.total) * 100).toFixed(1);
@@ -18,7 +17,7 @@ const failMsg = props => {
 
       <div className={styles.body}>
         <div className={styles.iconContainer}>
-          <i className={styles.icon} style={{ fontSize: '13vh' }} />
+          <i className={styles.icon} style={{ fontSize: "13vh" }} />
         </div>
 
         <div className="">
@@ -38,6 +37,4 @@ const failMsg = props => {
       </div>
     </article>
   );
-};
-
-export default failMsg;
+}

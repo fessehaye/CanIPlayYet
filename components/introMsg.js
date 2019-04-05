@@ -1,8 +1,8 @@
-import React, { useRef } from 'react';
-import { useMsgAnimations } from '../utils/hooks';
-import { introMsg as styles } from '../utils/styles';
+import React, { useRef } from "react";
+import { useMsgAnimations } from "../utils/hooks";
+import { introMsg as styles } from "../utils/styles";
 
-const introMsg = () => {
+export default function introMsg() {
   const myRef = useRef();
 
   useMsgAnimations(myRef);
@@ -21,6 +21,4 @@ const introMsg = () => {
       </div>
     </article>
   );
-};
-
-export default introMsg;
+}

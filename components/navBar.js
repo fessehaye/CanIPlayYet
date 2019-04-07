@@ -1,4 +1,6 @@
 import { navBar as styles } from '../utils/styles';
+import {Actions} from "../utils/hooks";
+
 
 const navBar = props => (
   <div className={styles.nav}>
@@ -11,9 +13,9 @@ const navBar = props => (
         id="slug"
         type="text"
         placeholder="slug"
-        value={props.slug}
+        value={props.state.slug}
         onChange={e =>
-          //props.updateState({ slug: e.target.value, result: null })
+          props.dispatch({type:Actions.UPDATE_SLUG,payload:e.target.value})
         }
       />
     </div>
@@ -27,9 +29,9 @@ const navBar = props => (
         id="setups"
         type="text"
         placeholder="setups"
-        value={props.setups}
+        value={props.state.setups}
         onChange={e =>
-          //props.updateState({ setups: e.target.value, result: null })
+          props.dispatch({type:Actions.UPDATE_SETUP,payload:e.target.value})
         }
       />
     </div>
@@ -39,9 +41,9 @@ const navBar = props => (
         <input
           className={styles.checkbox}
           type="checkbox"
-          value={props.loop}
+          value={props.state.loop}
           onChange={e =>
-            //props.updateState({ loop: e.target.value, result: null })
+            props.dispatch({type:Actions.UPDATE_LOOP})
           }
         />
         <span className={styles.checkboxText}>Loop</span>
@@ -53,13 +55,13 @@ const navBar = props => (
       className={styles.shareTutorial}
       onClick={props.shareLink}
     />
-    <i className={styles.tour} onClick={props.doTour} />
+    <i className={styles.tour} onClick={() => props.dispatch({type: Actions.START_TOUR})} />
 
     <button
       className={styles.button}
       type="button"
       id="checkTutorial"
-      disabled={!props.slug || !props.setups || props.loading}
+      disabled={props.state.slug === "" || props.state.setups === 0 || props.state.loading}
       onClick={props.checkFriendlies}
     >
       Check

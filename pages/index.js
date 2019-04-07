@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useReducer } from "react";
 import axios from "axios";
 import Tour from "reactour";
 import NavBar from "../components/navBar";
@@ -8,26 +8,26 @@ import Failure from "../components/failMsg";
 import Intro from "../components/introMsg";
 import { Steps, SERVER } from "../utils/index";
 import Page from "../layouts/main";
+import {reducer,Actions} from "../utils/hooks";
 
 export default function Index() {
-  const [slug, setSlug] = useState("");
-  const [setups, setSetups] = useState(0);
-  const [result, setResult] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [loop, setLoop] = useState(false);
-  const [isTourOpen, setisTourOpen] = useState(false);
+  const initialState = {
+    slug: "",
+    setups: 0,
+    result: null,
+    loading:false,
+    loop:false,
+    isTourOpen: false
+  }
+
+  const [state, dispatch] = useReducer(reducer, initialState);
+  const { slug,setups,result,loading,loop,isTourOpen } = state;
 
   useEffect(() => {
     const searchParams = new URLSearchParams(window.location.search);
-    setSlug(searchParams.get("slug") || "");
-    setSetups(parseFloat(searchParams.get("setups")) || 0);
+    dispatch({type: Actions.UPDATE_SLUG, payload: searchParams.get("slug") || ""});
+    dispatch({type: Actions.UPDATE_SETUP, payload: searchParams.get("setups") || 0});
   }, []);
-
-  const doTour = () => {
-    setSlug("caniplayexample");
-    setSetups(6);
-    setisTourOpen(true);
-  };
 
   const checkFriendlies = async () => {
     const searchParams = new URLSearchParams(window.location.search);
@@ -35,15 +35,14 @@ export default function Index() {
     searchParams.set("setups", setups);
 
     history.pushState(null, null, `?${searchParams.toString()}`);
-
+    
     if (loading === false) {
-      setLoading(true);
+      dispatch({type: Actions.TOGGLE_LOADING});
       if (!slug || !setups) {
         return;
       }
       const response = await axios.get(`${SERVER}/index?slug=${slug}`);
-      setResult(response.data);
-      setLoading(false);
+      dispatch({type: Actions.UPDATE_RESULT, payload: response.data});
 
       if (loop) {
         setTimeout(checkFriendlies(), 30000);
@@ -72,22 +71,19 @@ export default function Index() {
       <Failure result={result} />
     );
   }
-
+  
   return (
     <Page>
       <Tour
         steps={Steps}
         isOpen={isTourOpen}
         accentColor="#5661B3"
-        onRequestClose={() => setisTourOpen(false)}
+        onRequestClose={() => dispatch({type: Actions.STOP_TOUR})}
       />
       <NavBar
-        setups={setups}
-        slug={slug}
-        loop={loop}
-        loading={loading}
+        state={state}
+        dispatch={dispatch}
         shareLink={shareLink}
-        doTour={doTour}
         checkFriendlies={checkFriendlies}
       />
       <div className="mx-5 lg:mx-auto flex justify-center items-center flex-1 flex-col">

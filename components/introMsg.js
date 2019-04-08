@@ -1,14 +1,9 @@
-import React, { useRef } from "react";
-import { useMsgAnimations } from "../utils/hooks";
 import { introMsg as styles } from "../utils/styles";
 
 export default function introMsg() {
-  const myRef = useRef();
-
-  useMsgAnimations(myRef);
 
   return (
-    <article ref={myRef} className={styles.dialog}>
+    <article className={styles.dialog}>
       <img className={styles.bg} src="/static/intro.svg" alt="controller" />
       <div className={styles.overlay}>
         <p className={styles.text}>

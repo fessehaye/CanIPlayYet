@@ -1,16 +1,14 @@
-import React, { useRef } from "react";
-import { useMsgAnimations } from "../utils/hooks";
+import { useStepAnimations } from "../utils/hooks";
 import { failMsg as styles } from "../utils/styles";
 
 export default function failMsg(props) {
-  const myRef = useRef();
   const { result } = props;
   const complete = ((result.complete / result.total) * 100).toFixed(1);
 
-  useMsgAnimations(myRef, true);
+  useStepAnimations();
 
   return (
-    <article ref={myRef} className={styles.dialog}>
+    <article className={styles.dialog}>
       <div className={styles.header}>
         <p>No! Do Not Play!</p>
       </div>

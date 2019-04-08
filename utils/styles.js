@@ -5,7 +5,7 @@ export const successMsg = {
     'bg-green-lightest p-4 rounded-b leading-normal flex flex-wrap items-center',
   iconContainer: 'flex justify-center items-center mr-6 my-2 flex-grow',
   icon: 'fas fa-thumbs-up text-green mx-auto',
-  bullets: 'font-sans text-grey-darkest',
+  bullets: 'font-sans text-grey-darkest opacity-0',
 };
 
 export const failMsg = {
@@ -15,7 +15,7 @@ export const failMsg = {
     'bg-red-lightest p-4 rounded-b leading-normal flex flex-wrap items-center',
   iconContainer: 'flex justify-center items-center mr-6 my-2 flex-grow',
   icon: 'fas fa-thumbs-up text-red mx-auto',
-  bullets: 'font-sans text-grey-darkest',
+  bullets: 'font-sans text-grey-darkest opacity-0',
 };
 
 export const introMsg = {

@@ -1,18 +1,15 @@
-import React, { useRef } from "react";
-import anime from "animejs";
-import { useMsgAnimations } from "../utils/hooks";
+import { useStepAnimations } from "../utils/hooks";
 import { successMsg as styles } from "../utils/styles";
 
 export default function successMsg(props) {
-  const myRef = useRef();
-  useMsgAnimations(myRef, true);
+  useStepAnimations();
 
   const { result, setups } = props;
   const complete = ((result.complete / result.total) * 100).toFixed(1);
   const stations = setups - result.open;
 
   return (
-    <article ref={myRef} className={styles.dialog}>
+    <article className={styles.dialog}>
       <div className={styles.header}>
         <p>Yes! Have Fun!</p>
       </div>

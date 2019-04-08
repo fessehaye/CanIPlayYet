@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useReducer } from "react";
+import React, { useEffect, useReducer } from "react";
 import axios from "axios";
 import Tour from "reactour";
 import NavBar from "../components/navBar";
@@ -9,6 +9,7 @@ import Intro from "../components/introMsg";
 import { Steps, SERVER } from "../utils/index";
 import Page from "../layouts/main";
 import {reducer,Actions} from "../utils/hooks";
+
 
 export default function Index() {
   const initialState = {
@@ -35,7 +36,7 @@ export default function Index() {
     searchParams.set("setups", setups);
 
     history.pushState(null, null, `?${searchParams.toString()}`);
-    
+
     if (loading === false) {
       dispatch({type: Actions.TOGGLE_LOADING});
       if (!slug || !setups) {
@@ -87,6 +88,7 @@ export default function Index() {
         checkFriendlies={checkFriendlies}
       />
       <div className="mx-5 lg:mx-auto flex justify-center items-center flex-1 flex-col">
+        
         {notif}
       </div>
     </Page>

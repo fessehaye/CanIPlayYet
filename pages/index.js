@@ -9,6 +9,7 @@ import Intro from "../components/introMsg";
 import { Steps, SERVER } from "../utils/index";
 import Page from "../layouts/main";
 import {reducer,Actions} from "../utils/hooks";
+import { useTransition,animated,config } from 'react-spring';
 
 
 export default function Index() {
@@ -63,15 +64,26 @@ export default function Index() {
     }
   };
 
-  let notif = <Intro />;
+  
+  let resultNotif = null;
 
   if (result) {
-    notif = isSetupsAvailable(result) ? (
+    resultNotif = isSetupsAvailable(result) ? (
       <Success result={result} setups={setups} />
     ) : (
       <Failure result={result} />
     );
   }
+
+  const transitions = useTransition(result === null, null, {
+    from: { position: 'absolute', opacity: 0, transform: `perspective(600px) rotateY(-20deg)` },
+    enter: { opacity: 1, transform: `perspective(600px) rotateY(0deg)` },
+    leave: { opacity: 0, transform: `perspective(600px) rotateY(-20deg)` },
+    config: config.wobbly,
+    delay: 400,
+    unique:true
+    }
+  )
   
   return (
     <Page>
@@ -88,8 +100,13 @@ export default function Index() {
         checkFriendlies={checkFriendlies}
       />
       <div className="mx-5 lg:mx-auto flex justify-center items-center flex-1 flex-col">
-        
-        {notif}
+          {
+            transitions.map(({ item, key, props }) => 
+            item
+              ? <animated.div style={props}><Intro /></animated.div>
+              : <animated.div style={props}>{resultNotif}</animated.div>
+            )
+          }
       </div>
     </Page>
   );

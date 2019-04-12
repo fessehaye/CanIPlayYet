@@ -6,8 +6,8 @@ export function useStepAnimations() {
 
     const tl = anime.timeline({
       easing: 'easeOutExpo',
-      duration: 750,
-      delay: 1000,
+      duration: 650,
+      delay: 1500,
     });
 
     tl.add({

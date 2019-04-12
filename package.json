@@ -38,6 +38,7 @@
     "node-sass": "^4.11.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
+    "react-spring": "^8.0.19",
     "reactour": "^1.13.1",
     "styled-components": "4.0.0",
     "webpack": "^4.28.4"

@@ -6,15 +6,17 @@ import Page from "../layouts/main";
 import { SERVER } from "../utils/index";
 
 export default function View() {
-  const [slug, setSlug] = useState("");
-  const [setups, setSetups] = useState(0);
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
+  let slug = "";
+  let setups = 0;
 
-  useEffect(() => {
+  if (process.browser) {
     const searchParams = new URLSearchParams(window.location.search);
-    setSlug(searchParams.get("slug") || "");
-    setSetups(parseFloat(searchParams.get("setups")) || 0);
+    slug = searchParams.get("slug");
+    setups = searchParams.get("setups");
+  }
+  useEffect(() => {
     checkFriendlies();
   }, []);
 
@@ -22,6 +24,7 @@ export default function View() {
     if (loading === false) {
       setLoading(true);
       if (!slug || !setups) {
+        setLoading(false);
         return;
       }
       const response = await axios.get(`${SERVER}/index?slug=${slug}`);

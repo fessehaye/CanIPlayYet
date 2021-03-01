@@ -2,7 +2,7 @@
 
 A site to indicate weather you can can friendlies/casual games during the tournament with remaining setups.
 
-Currently hosted on [https://caniplay.fun/](https://caniplay.fun/)
+Currently hosted on [https://caniplay.netlify.app/](https://caniplay.netlify.app/)
 
 ## Setup locally
 
